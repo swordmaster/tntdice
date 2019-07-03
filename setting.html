@@ -1,0 +1,49 @@
+<?php include('header.php'); ?>
+
+<main id="setting">
+<div class="card">
+	<h2><span class="jp">設定</span><span class="en">Setting</span></h2>
+</div>
+
+<div class="card" id="color-wrap">
+	<h3><span class="jp">初期化</span><span class="en">Setting Reset</span></h3>
+	<div class="in tc">
+	<a href="#" id="reset" class="edit">すべての情報を初期化する</a>
+	</div>
+</div>
+
+<div class="card" id="about">
+	<h3><span class="jp">注意</span><span class="en">Attention</h3>
+	<div class="in">
+	このシステムは開発中のバージョンです。ダイスの計算違い、様々なバグ、記録データの消去が発生する場合があります。
+	</div>
+</div>
+
+<div class="card" id="copyright">
+	<div class="in">
+	<a href="https://twitter.com/moonfish77" target="_blank"><i class="fa fa-twitter"></i></a>
+	<p>ご意見・ご要望・バグ報告があればお気軽にDMください。</p>
+	<p>&copy; Moonfish</p>
+	</div>
+</div>
+
+
+
+</main>
+
+
+<script src="js/script.js"></script>
+<script>
+$(function(){
+	var st = localStorage;
+
+	$('#reset').click(function(){
+		if(confirm('データを初期化します。')){
+			initData();
+		}
+		return false;
+	});
+});
+</script>
+
+<?php include('footer.php'); ?>
